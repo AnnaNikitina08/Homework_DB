@@ -44,7 +44,7 @@ create table if not exists Track (
 create table if not exists CollectionTrack (
         id SERIAL primary key,
         id_track INTEGER NOT NULL REFERENCES Track(id),
-        id_collection INTEGER NOT NULL REFERENCES Track
+        id_collection INTEGER NOT NULL REFERENCES Collection(id)
 );
 
         
