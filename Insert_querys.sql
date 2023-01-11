@@ -41,6 +41,7 @@ INSERT INTO album (title, production_year) VALUES
 ('Oceans of fantasy', '05/07/1979'),
 ('Porgy and Bess', '14/01/1959');
 
+
 SELECT * FROM album
 
 INSERT INTO albumperformer (id_album, id_performer) VALUES
@@ -83,7 +84,7 @@ INSERT INTO track (title, lenghs, album_id) VALUES
 ('Bahama mama', 3.33, 8),
 ('Bye bay bluebird', 4.47, 8),
 ('Sammertime', 4.58, 9),
-('Buzzard Song', 2.58, 9)
+('Buzzard Song', 2.58, 9);
 
 SELECT * FROM track
 
@@ -120,3 +121,30 @@ SELECT * FROM collectiontrack
 UPDATE album
 SET production_year = '03/11/2018'
 WHERE id = 1;
+
+INSERT INTO album (title, production_year) values
+('New Hits', '24/11/2019'),
+('Timeless Classics', '04/04/2020');
+
+SELECT * FROM album
+
+UPDATE album
+SET production_year = '11/11/2020'
+WHERE id = 7;
+
+DELETE FROM album  
+WHERE id = 18;
+
+INSERT INTO track (title, lenghs, album_id) values
+('Lacrimosa', 3.48, 19),
+('Andante grazioso', 7.54, 19);
+
+ALTER TABLE genre 
+RENAME COLUMN name TO genre_name;
+
+DELETE FROM collectiontrack  
+WHERE id_track  = 13;
+
+UPDATE track  
+SET album_id  = 6
+WHERE id = 18;
